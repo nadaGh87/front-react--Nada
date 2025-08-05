@@ -1,23 +1,28 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  increment,
-  decrement,
-  incrementByAmount,
-} from "./features/counter/counterSlice";
-
+import AdministrativeData from "./components/ProfilePage/AdministrativeData/AdministrativeData";
+import EmergencyContacts from "./components/ProfilePage/EmergencyContacts/EmergencyContact";
+import FamilyMember from "./components/ProfilePage/FamilyMember/FamilyMember";
+import PersonalHistory from "./components/ProfilePage/PersonalHistory/PersonalHistory";
+import MedicalHistory from "./components/ProfilePage/MedicalHistory/MedicalHistory";
 function App() {
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
-
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Counter: {count}</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
-      <button onClick={() => dispatch(incrementByAmount(5))}>
-        Increment by 5
-      </button>
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#f5f5f5",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "20px",
+        gap: "20px",
+      }}
+    >
+      <AdministrativeData />
+      <EmergencyContacts />
+      <FamilyMember />
+      <PersonalHistory />
+      <MedicalHistory />
     </div>
   );
 }

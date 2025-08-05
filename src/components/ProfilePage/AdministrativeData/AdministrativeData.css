@@ -1,0 +1,282 @@
+.administrative-page-layout {
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.administrative-page-header {
+  background: #fff;
+  padding: 0 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 !important;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.page-icon {
+  color: #6b7280;
+}
+
+/* Page-level edit icon styling */
+.page-edit-icon {
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+}
+
+.page-edit-icon:hover {
+  color: #6b7280;
+}
+
+.administrative-page-content {
+  padding: 24px;
+  background: #fafafa;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-breadcrumb {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+}
+
+.breadcrumb-item.active {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.breadcrumb-separator {
+  color: #9ca3af;
+}
+
+.page-description {
+  margin-bottom: 24px;
+}
+
+.page-description p {
+  color: #6b7280;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Administrative Data Component Styles - Updated for Custom Card */
+.administrative-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0;
+}
+
+/* Custom Card Overrides */
+.administrative-container .ant-card {
+  background: #f5fff5 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #e0f0e0 !important;
+  min-height: 300px !important;
+}
+
+.administrative-container .ant-card-body {
+  padding: 30px !important;
+}
+
+.administrative-container .ant-card-head {
+  padding: 20px 30px 0 30px !important;
+  border-bottom: none !important;
+  background: transparent !important;
+}
+
+.administrative-container .ant-card-head-title {
+  padding: 0 !important;
+}
+
+.administrative-container .ant-card-extra {
+  padding: 0 !important;
+}
+
+.administrative-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 17px;
+  width: 100%;
+}
+
+.administrative-icon {
+  color: #6b7280;
+}
+
+.administrative-title {
+  margin: 0 !important;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 17px;
+  flex: 1;
+}
+
+/* Edit icon styles for the component header */
+.edit-icon {
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.edit-icon:hover {
+  color: #6b7280;
+}
+
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  background: #f0fff0;
+  border-radius: 10px;
+  border: 1px solid #d6ead6;
+  transition: all 0.2s ease;
+}
+
+.data-item:hover {
+  background: #d4e6d4;
+  border-color: #a8c8a8;
+}
+
+.data-label {
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.data-value {
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.editable-value {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.editable-value:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Custom Input Overrides for inline editing */
+.editable-input.ant-input {
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #1f2937 !important;
+  line-height: 1.3 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.editable-input.ant-input:focus,
+.editable-input.ant-input:hover {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .administrative-page-header {
+    padding: 0 16px;
+  }
+
+  .page-edit-icon {
+    right: 16px;
+  }
+
+  .administrative-page-content {
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .administrative-container {
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .administrative-container .ant-card-body {
+    padding: 20px !important;
+  }
+
+  .administrative-container .ant-card-head {
+    padding: 15px 20px 0 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .administrative-container {
+    margin: 10px;
+    max-width: none;
+  }
+
+  .data-item {
+    padding: 14px 16px;
+  }
+
+  .data-label {
+    font-size: 13px;
+  }
+
+  .data-value {
+    font-size: 15px;
+  }
+}
