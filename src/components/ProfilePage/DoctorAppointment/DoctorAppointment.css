@@ -1,0 +1,331 @@
+/* components/DoctorAppointment/DoctorAppointment.css */
+
+.doctor-appointment-container {
+  padding: 24px;
+  background-color: #f5f5f5;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  /* Removed min-height completely */
+}
+
+.appointment-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content !important;
+  min-height: auto !important;
+}
+
+.card-content-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-title {
+  margin: 0 !important;
+  color: #262626;
+  font-weight: 600;
+}
+
+.controls-section {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.search-input {
+  width: 280px;
+}
+
+.search-input .ant-input {
+  border-radius: 6px;
+}
+
+.status-filter {
+  width: 140px;
+}
+
+.status-filter .ant-select-selector {
+  border-radius: 6px;
+}
+
+/* Table Styles */
+.appointments-table {
+  margin-bottom: 0 !important;
+}
+
+.appointments-table .ant-table {
+  background: white;
+  border-radius: 8px;
+}
+
+.appointments-table .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  border-bottom: 2px solid #f0f0f0;
+  font-weight: 600;
+  color: #595959;
+  padding: 8px 12px !important;
+  height: auto !important;
+}
+
+.appointments-table .ant-table-tbody > tr > td {
+  padding: 8px 12px !important;
+  border-bottom: 1px solid #f0f0f0;
+  height: auto !important;
+}
+
+.appointments-table .ant-table-tbody > tr {
+  height: auto !important;
+}
+
+.appointments-table .ant-table-tbody > tr:hover > td {
+  background-color: #fafafa;
+}
+
+/* Date & Time Cell */
+.datetime-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.datetime-cell .date {
+  font-weight: 500;
+  color: #262626;
+  font-size: 14px;
+}
+
+.datetime-cell .time {
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+/* Patient Cell */
+.patient-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-avatar {
+  flex-shrink: 0;
+}
+
+.patient-name {
+  font-weight: 500;
+  color: #262626;
+}
+
+/* Common Status Tag Styling */
+.status-tag {
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  gap: 4px;
+}
+
+/* Override Specific Tag Colors */
+.ant-tag.ant-tag-green {
+  background-color: #dcfce7 !important;
+  border-color: #b7eb8f !important;
+  color: #229556ff !important;
+}
+
+.ant-tag.ant-tag-orange {
+  background-color: #ffd700 !important;
+  border-color: #ffd591 !important;
+  color: #fa8c16 !important;
+}
+
+.ant-tag.ant-tag-red {
+  background-color: #fee2e2 !important;
+  border-color: #ffb3b3 !important;
+  color: #ff4d4f !important;
+}
+
+/* Action Buttons */
+.action-btn {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+.edit-btn {
+  color: #1890ff;
+}
+
+.edit-btn:hover {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.delete-btn {
+  color: #ff4d4f;
+}
+
+.delete-btn:hover {
+  background-color: #fff2f0;
+  color: #ff4d4f;
+}
+
+.confirm-btn {
+  color: #52c41a;
+}
+
+.confirm-btn:hover {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+/* Updated Pagination Styles */
+.custom-pagination {
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+
+.custom-pagination .ant-pagination-total-text {
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+/* Style the Previous/Next buttons */
+.custom-pagination .ant-pagination-prev,
+.custom-pagination .ant-pagination-next {
+  border: none;
+  background: transparent;
+}
+
+.custom-pagination .ant-pagination-prev a,
+.custom-pagination .ant-pagination-next a {
+  color: #1890ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.custom-pagination .ant-pagination-prev:hover a,
+.custom-pagination .ant-pagination-next:hover a {
+  color: #40a9ff;
+}
+
+.custom-pagination .ant-pagination-disabled a {
+  color: #d9d9d9 !important;
+}
+
+/* Style the page numbers */
+.custom-pagination .ant-pagination-item {
+  border-radius: 4px;
+}
+
+.custom-pagination .ant-pagination-item-active {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.custom-pagination .ant-pagination-item-active a {
+  color: white;
+}
+
+/* Hide unwanted elements */
+.custom-pagination .ant-pagination-options {
+  display: none !important;
+}
+
+/* Override any default card padding/margin that might be causing issues */
+.appointment-card .ant-card-body {
+  padding: 24px !important;
+  margin: 0 !important;
+}
+
+/* Ensure no extra spacing from the custom Card component */
+.appointment-card .ant-space {
+  width: 100% !important;
+}
+
+.appointment-card .ant-space > .ant-space-item {
+  margin-bottom: 0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctor-appointment-container {
+    padding: 16px;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .status-filter {
+    width: 100%;
+  }
+
+  .appointments-table .ant-table-tbody > tr > td {
+    padding: 12px 8px;
+  }
+
+  .patient-cell {
+    gap: 8px;
+  }
+
+  .patient-name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .appointments-table {
+    font-size: 12px;
+  }
+
+  .datetime-cell .date {
+    font-size: 12px;
+  }
+
+  .datetime-cell .time {
+    font-size: 11px;
+  }
+
+  .patient-avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .status-tag {
+    font-size: 11px;
+    padding: 1px 6px;
+  }
+
+  .action-btn {
+    width: 24px;
+    height: 24px;
+  }
+}

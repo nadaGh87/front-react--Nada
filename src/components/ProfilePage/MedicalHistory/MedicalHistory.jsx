@@ -4,7 +4,7 @@ import { PlusOutlined } from "@ant-design/icons";
 
 import Card from "../../../assets/AntDesign/Card";
 import Button from "../../../assets/AntDesign/Button";
-import Input from "../../../assets/AntDesign/Input"; // assuming you export this
+import Input from "../../../assets/AntDesign/Input";
 
 import "./MedicalHistory.css";
 

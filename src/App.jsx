@@ -4,6 +4,7 @@ import EmergencyContacts from "./components/ProfilePage/EmergencyContacts/Emerge
 import FamilyMember from "./components/ProfilePage/FamilyMember/FamilyMember";
 import PersonalHistory from "./components/ProfilePage/PersonalHistory/PersonalHistory";
 import MedicalHistory from "./components/ProfilePage/MedicalHistory/MedicalHistory";
+import DoctorAppointment from "./components/ProfilePage/DoctorAppointment/DoctorAppointment";
 function App() {
   return (
     <div
@@ -23,6 +24,7 @@ function App() {
       <FamilyMember />
       <PersonalHistory />
       <MedicalHistory />
+      <DoctorAppointment />
     </div>
   );
 }
