@@ -1,0 +1,412 @@
+.calendar-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Header */
+.calendar-header {
+  margin-bottom: 24px;
+}
+
+.calendar-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.month-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.month-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.current-month {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.dropdown-arrow {
+  color: #3b82f6;
+  width: 16px;
+  height: 16px;
+}
+
+.nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-button {
+  padding: 4px;
+  border: none;
+  background: none;
+  border-radius: 4px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  margin-bottom: 32px;
+}
+
+.weekdays-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.weekday {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day-button {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #374151;
+}
+
+.day-button.invisible {
+  visibility: hidden;
+}
+
+.day-button:hover:not(.selected):not(.next-month) {
+  background-color: #f3f4f6;
+}
+
+.day-button.selected {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.day-button.next-month {
+  color: #d1d5db;
+}
+
+.day-button.next-month:hover {
+  background-color: #f9fafb;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.manage-slots-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  background: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.manage-slots-btn:hover {
+  background-color: #eff6ff;
+}
+
+.block-date-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.block-date-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Year Month Picker Styles */
+.year-month-picker {
+  width: 100%;
+}
+
+.picker-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-bottom: 32px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.year-range-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.range-nav-button {
+  border: none;
+  background: none;
+  color: #3b82f6;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.range-nav-button:hover {
+  background-color: #eff6ff;
+}
+
+.year-range {
+  color: #3b82f6;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.years-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.year-button {
+  padding: 8px 4px;
+  border: none;
+  background: none;
+  color: #3b82f6;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.year-button:hover {
+  background-color: #eff6ff;
+}
+
+.year-button.selected {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.months-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  row-gap: 16px;
+}
+
+.month-button {
+  padding: 8px 4px;
+  border: none;
+  background: none;
+  color: #3b82f6;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.month-button:hover {
+  background-color: #eff6ff;
+}
+
+.month-button.selected {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Manage Slots Styles */
+.manage-slots-container {
+  width: 100%;
+}
+
+.selected-date-display {
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 24px 0;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.time-slots-container {
+  margin: 24px 0;
+  border-left: 4px solid #3b82f6;
+  padding-left: 16px;
+}
+
+.time-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.time-icon {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.time-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.from-label,
+.to-label {
+  color: #374151;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.time-select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.time-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.slot-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remove-slot-btn,
+.add-slot-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.remove-slot-btn {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.remove-slot-btn:hover:not(:disabled) {
+  background-color: #fecaca;
+}
+
+.remove-slot-btn:disabled {
+  background-color: #f3f4f6;
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.add-slot-btn {
+  background-color: #dbeafe;
+  color: #3b82f6;
+}
+
+.add-slot-btn:hover {
+  background-color: #bfdbfe;
+}
+
+.slots-action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  background: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #eff6ff;
+}
+
+.save-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #2563eb;
+}

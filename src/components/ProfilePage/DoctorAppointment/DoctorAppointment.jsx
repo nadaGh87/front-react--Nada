@@ -211,7 +211,6 @@ const DoctorAppointment = () => {
               showLessItems: true,
               simple: false,
               size: "default",
-              // Remove the extra controls to match your desired design
               itemRender: (current, type, originalElement) => {
                 if (type === "prev") {
                   return <span>Previous</span>;
